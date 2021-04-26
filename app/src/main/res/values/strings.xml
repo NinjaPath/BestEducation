@@ -6,4 +6,7 @@
     <string name="account_create">Создание аккаунта</string>
     <string name="student">Я ученик/студент</string>
     <string name="teacher">Я учитель</string>
+    <string name="profile">Profile</string>
+    <string name="chats">Chats</string>
+    <string name="home">Home</string>
 </resources>
