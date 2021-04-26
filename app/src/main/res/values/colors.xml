@@ -10,4 +10,5 @@
 
     <color name="BE_black">#181818</color>
     <color name="BE_yellow">#F8F024</color>
+    <color name="red">#FF2929</color>
 </resources>

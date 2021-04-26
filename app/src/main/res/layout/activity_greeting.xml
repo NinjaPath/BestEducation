@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/authorization_background"
     android:padding="25dp"
-    tools:context="activities.GreetingActivity"
+    tools:context="com.ninjapath.besteducation.activities.GreetingActivity"
 
     >
 
@@ -14,7 +14,7 @@
         android:id="@+id/greeting_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60sp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/proximanova_extrabold"
         android:text="@string/app_name"
         android:textColor="#FFFFFF"
@@ -32,14 +32,13 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
-
         app:layout_constraintTop_toBottomOf="@id/greeting_app_name" />
 
 
     <Button
         android:id="@+id/sign_in"
         android:layout_width="330dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:backgroundTint="@color/BE_yellow"
         android:fontFamily="@font/proximanova_semibold"
         android:text="@string/sign_in"
@@ -56,7 +55,7 @@
     <Button
         android:id="@+id/log_in"
         android:layout_width="330dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:backgroundTint="@color/BE_black"
         android:fontFamily="@font/proximanova_semibold"
         android:text="@string/log_in"

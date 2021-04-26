@@ -1,14 +1,13 @@
-package activities;
+package com.ninjapath.besteducation.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.ninjapath.besteducation.AccountType;
+import com.ninjapath.besteducation.enums.AccountType;
 import com.ninjapath.besteducation.R;
 
 public class TypeSelectionActivity extends AppCompatActivity {

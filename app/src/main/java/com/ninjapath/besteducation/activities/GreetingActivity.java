@@ -1,4 +1,4 @@
-package activities;
+package com.ninjapath.besteducation.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 

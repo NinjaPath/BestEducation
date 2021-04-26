@@ -1,4 +1,4 @@
-package com.ninjapath.besteducation;
+package com.ninjapath.besteducation.enums;
 
 public enum AccountType {
 
