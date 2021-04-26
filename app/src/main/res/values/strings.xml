@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Best Education</string>
+    <string name="app_description">Приложение для поиска лучших учителей по любому предмету</string>
+    <string name="log_in">Войти</string>
+    <string name="sign_in">Создать аккаунт</string>
+    <string name="account_create">Создание аккаунта</string>
+    <string name="student">Я ученик/студент</string>
+    <string name="teacher">Я учитель</string>
 </resources>
