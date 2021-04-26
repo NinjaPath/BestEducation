@@ -13,6 +13,9 @@ public class GreetingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        Intent intent2 = new Intent(GreetingActivity.this, MainActivity.class);
+//        startActivity(intent2);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_greeting);
 
