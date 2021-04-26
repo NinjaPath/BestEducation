@@ -17,7 +17,7 @@ public class TypeSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_type_selection);
 
         studentButton = findViewById(R.id.student_button);
-        studentButton = findViewById(R.id.teacher_button);
+        teacherButton = findViewById(R.id.teacher_button);
 
         studentButton.setOnClickListener(v -> {
             Intent intent = new Intent(TypeSelectionActivity.this, RegistrationActivity.class);

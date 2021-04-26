@@ -14,13 +14,13 @@ public class GreetingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_greeting);
 
         signIn = findViewById(R.id.sign_in);
         logIn = findViewById(R.id.log_in);
 
         signIn.setOnClickListener(v -> {
-            Intent intent = new Intent(GreetingActivity.this, RegistrationActivity.class);
+            Intent intent = new Intent(GreetingActivity.this, TypeSelectionActivity.class);
             startActivity(intent);
         });
 
