@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "945078605964",
+    "project_id": "besteducation-993bf",
+    "storage_bucket": "besteducation-993bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945078605964:android:3485b29c8f3ab425fa43a9",
+        "android_client_info": {
+          "package_name": "com.ninjapath.besteducation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945078605964-b94u7np1jur0lfa5lsgc7c7q7q2u10r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWA0zfGO4kIhTpljqMJ7CBLH85cavQuKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945078605964-b94u7np1jur0lfa5lsgc7c7q7q2u10r6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
