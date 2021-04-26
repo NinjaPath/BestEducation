@@ -1,9 +1,8 @@
-package com.ninjapath.besteducation;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.ninjapath.besteducation.R;
 public class MainActivity extends AppCompatActivity {
 
     @Override
