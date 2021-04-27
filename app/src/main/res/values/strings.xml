@@ -34,4 +34,39 @@
     <string name="my_courses">Мои курсы</string>
     <string name="messages">Сообщения</string>
     <string name="profile_toolbar">Профиль</string>
+
+    <!-- CreateActivity strings-->
+    <string name="create_course">Создайте курс и найдите свою аудиторию</string>
+    <string name="insert_course_name">Введите название курса</string>
+    <string name="add_example_of_video">Добавьте видео пример вашего урока </string>
+    <string name="insert_course_price">Введите цену курса</string>
+    <string name="insert_count">Введите количество участников в группе</string>
+
+    <!-- SchoolSubjectsSpinner strings-->
+    <string-array name="school_subject">
+        <item>Математика</item>
+        <item>Русский язык</item>
+        <item>Физика</item>
+        <item>Информатика</item>
+        <item>Биология</item>
+        <item>Химия</item>
+        <item>Литература</item>
+        <item>История</item>
+        <item>Обществознание</item>
+        <item>Английский язык</item>
+    </string-array>
+    <!-- SchoolSubjectsSpinner strings-->
+    <string-array name="group_name">
+        <item>Индивидуальные занятия</item>
+        <item>Группа 1–4 человека</item>
+        <item>Группа 5 – 15 человек</item>
+        <item>Группа более 15 человек</item>
+    </string-array>
+    <!-- LessonTypes strings-->
+    <string-array name="lessons_type">
+        <item>Удалённо</item>
+        <item>На дому ученика</item>
+        <item>На дому у учителя</item>
+        <item>Офис</item>
+    </string-array>
 </resources>
