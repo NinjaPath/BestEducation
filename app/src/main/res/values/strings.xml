@@ -26,4 +26,9 @@
 
     <!-- Snackbar errors strings -->
     <string name="unexpected_error">Возникла непредвиденная ошибка!</string>
+
+    <!-- Toolbar strings-->
+    <string name="my_courses">Мои курсы</string>
+    <string name="messages">Сообщения</string>
+    <string name="profile_toolbar">Профиль</string>
 </resources>

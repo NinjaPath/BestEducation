@@ -13,5 +13,6 @@
     <color name="bottom_nav_icon">#96A7AF</color>
 
     <color name="toolbar">#4F5155</color>
+    <color name="grey">#30444E</color>
     <color name="red">#FF2929</color>
 </resources>
