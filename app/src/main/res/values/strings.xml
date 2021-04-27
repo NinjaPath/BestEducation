@@ -1,5 +1,9 @@
 <resources>
 
+    <!--Other-->
+    <string name="spam">AXAXAXAAX</string>
+    <string name="spam_email">AXAXAXAAX@mail.ru</string>
+
     <!--Greeting and registration strings-->
     <string name="app_name">Best Education</string>
     <string name="app_description">Приложение для поиска лучших учителей по любому предмету</string>
@@ -27,6 +31,12 @@
     <!-- HomeFragment strings-->
     <string name="my_courses_text">Мои курсы</string>
 
+
+    <!-- ProfileFragment strings -->
+    <string name="courses">Курсы</string>
+    <string name="send_message">Написать</string>
+    <string name="subscribe">Подписаться</string>
+
     <!-- Snackbar errors strings -->
     <string name="unexpected_error">Возникла непредвиденная ошибка!</string>
 
@@ -34,4 +44,5 @@
     <string name="my_courses">Мои курсы</string>
     <string name="messages">Сообщения</string>
     <string name="profile_toolbar">Профиль</string>
+
 </resources>
