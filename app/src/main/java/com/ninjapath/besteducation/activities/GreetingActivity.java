@@ -1,10 +1,12 @@
-package com.ninjapath.besteducation;
+package com.ninjapath.besteducation.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import com.ninjapath.besteducation.R;
 
 public class GreetingActivity extends AppCompatActivity {
 
