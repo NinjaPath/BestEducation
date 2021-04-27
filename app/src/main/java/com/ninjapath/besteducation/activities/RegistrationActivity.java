@@ -7,17 +7,27 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.ninjapath.besteducation.AuthenticationData;
 import com.ninjapath.besteducation.R;
 import com.ninjapath.besteducation.SnackbarMessages;
 import com.ninjapath.besteducation.exceptions.EntryException;
 import com.ninjapath.besteducation.validationClasses.AuthenticationDataValidation;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RegistrationActivity extends AppCompatActivity {
 
     public static final String ACCOUNT_TYPE = "accountType";
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore fstore;
     private ImageButton arrowBack;
     private TextView singInText;
     private Button singInButton;
@@ -30,6 +40,9 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        String accountType = getIntent().getExtras().getString(ACCOUNT_TYPE);
+        mAuth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
         arrowBack = findViewById(R.id.backArrow);
         singInText = findViewById(R.id.sign_in);
         singInButton = findViewById(R.id.sign_in_button);
@@ -47,11 +60,33 @@ public class RegistrationActivity extends AppCompatActivity {
             startActivity(intentToLogin);
         });
         singInButton.setOnClickListener(view -> {
-            AuthenticationData authenticationData = new AuthenticationData(nicknameEditText.getText().toString(),
+            AuthenticationData authenticationData = new AuthenticationData(accountType, nicknameEditText.getText().toString(),
                     emailEditText.getText().toString(), passwordEditText.getText().toString(),
                     repeatedPasswordEditText.getText().toString());
             try {
                 AuthenticationDataValidation.validateData(authenticationData);
+                mAuth.createUserWithEmailAndPassword(authenticationData.getEmail(),
+                        authenticationData.getPassword())
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                Map<String, Object> userInfo = new HashMap<>();
+                                userInfo.put("id", mAuth.getCurrentUser().getUid());
+                                userInfo.put("accountType", authenticationData.getAccountType());
+                                userInfo.put("nickname", authenticationData.getUsername());
+                                userInfo.put("email", authenticationData.getEmail());
+                                userInfo.put("password", authenticationData.getPassword());
+                                fstore.collection("users").
+                                        document(mAuth.getCurrentUser().getUid()).set(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            Intent intentToMain = new Intent(RegistrationActivity.this, MainActivity.class);
+                                            startActivity(intentToMain);
+                                        }
+                                    }
+                                });
+                            }
+                        });
             } catch (EntryException e) {
                 SnackbarMessages.makeSnackbarError(view, e.getErrorCode().getErrorString());
             }

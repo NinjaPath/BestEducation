@@ -1,8 +1,14 @@
 package com.ninjapath.besteducation;
 
 public class AuthenticationData {
+    private String accountType;
     private String username;
     private String email;
+
+    public String getAccountType() {
+        return accountType;
+    }
+
     private String password;
     private String repeatedPassword;
 
@@ -22,7 +28,9 @@ public class AuthenticationData {
         return repeatedPassword;
     }
 
-    public AuthenticationData(String username, String email, String password, String repeatedPassword) {
+
+    public AuthenticationData( String accountType, String username, String email, String password, String repeatedPassword) {
+        this.accountType = accountType;
         this.username = username;
         this.email = email;
         this.password = password;
