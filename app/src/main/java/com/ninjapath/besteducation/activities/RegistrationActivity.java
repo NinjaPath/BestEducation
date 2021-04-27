@@ -82,6 +82,8 @@ public class RegistrationActivity extends AppCompatActivity {
                                         if (task.isSuccessful()) {
                                             Intent intentToMain = new Intent(RegistrationActivity.this, MainActivity.class);
                                             startActivity(intentToMain);
+                                        } else {
+                                            SnackbarMessages.makeSnackbarError(view,getResources().getString(R.string.unexpected_error));
                                         }
                                     }
                                 });

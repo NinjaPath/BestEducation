@@ -23,4 +23,7 @@
     <string name="sing_in_with_google">Войти с помощью Google</string>
     <string name="already_have_acc">Уже есть аккаунт?</string>
     <string name="log_in_underline"><u>Войти</u></string>
+
+    <!-- Snackbar errors strings -->
+    <string name="unexpected_error">Возникла непредвиденная ошибка!</string>
 </resources>
