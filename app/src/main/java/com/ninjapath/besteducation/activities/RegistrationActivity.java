@@ -17,6 +17,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.ninjapath.besteducation.AuthenticationData;
 import com.ninjapath.besteducation.R;
 import com.ninjapath.besteducation.SnackbarMessages;
+import com.ninjapath.besteducation.enums.AccountType;
 import com.ninjapath.besteducation.exceptions.EntryException;
 import com.ninjapath.besteducation.validationClasses.AuthenticationDataValidation;
 
@@ -51,14 +52,6 @@ public class RegistrationActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password_edit_text);
         repeatedPasswordEditText = findViewById(R.id.repeat_password_edit_text);
         singInText = findViewById(R.id.sign_in_text_view);
-        arrowBack.setOnClickListener(view -> {
-            Intent backIntent = new Intent(RegistrationActivity.this, GreetingActivity.class);
-            startActivity(backIntent);
-        });
-        singInText.setOnClickListener(view -> {
-            Intent intentToLogin = new Intent(RegistrationActivity.this, LoginActivity.class);
-            startActivity(intentToLogin);
-        });
         singInButton.setOnClickListener(view -> {
             AuthenticationData authenticationData = new AuthenticationData(accountType, nicknameEditText.getText().toString(),
                     emailEditText.getText().toString(), passwordEditText.getText().toString(),
@@ -81,6 +74,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
                                             Intent intentToMain = new Intent(RegistrationActivity.this, MainActivity.class);
+                                            intentToMain.putExtra(MainActivity.ACCOUNT_TYPE, accountType);
                                             startActivity(intentToMain);
                                         }
                                     }

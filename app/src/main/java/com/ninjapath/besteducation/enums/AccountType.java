@@ -1,6 +1,9 @@
 package com.ninjapath.besteducation.enums;
 
-public enum AccountType {
+import java.io.Serializable;
+
+public enum AccountType implements Serializable {
+
 
     TEACHER("Teacher"),
     STUDENT("Student");
