@@ -44,5 +44,6 @@
     <string name="my_courses">Мои курсы</string>
     <string name="messages">Сообщения</string>
     <string name="profile_toolbar">Профиль</string>
+    <string name="discussions">Discussions</string>
 
 </resources>
