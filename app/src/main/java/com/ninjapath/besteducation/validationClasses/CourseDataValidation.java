@@ -30,7 +30,7 @@ public class CourseDataValidation {
     private static void validatePrice(CourseData courseData) throws EntryException {
         String textRegex = "^[1-9]\\d{0,7}(?:\\.\\d{1,4})?$";
         Pattern pat = Pattern.compile(textRegex);
-        if (!pat.matcher(courseData.getName()).matches()) {
+        if (!pat.matcher(courseData.getPrice()).matches()) {
             throw new EntryException(EntryErrorCode.WRONG_PRICE);
         }
     }
