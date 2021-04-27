@@ -4,15 +4,18 @@
     <item
             android:icon="@drawable/search_icon"
             android:id="@+id/nav_home"
+            android:title="@string/home"
             />
     <item
             android:icon="@drawable/chat_icon"
             android:id="@+id/nav_chats"
-
+            android:title="@string/home"
             />
     <item
+
             android:icon="@drawable/profile_icon"
             android:id="@+id/nav_profile"
+            android:title="@string/home"
             />
 
 </menu>
