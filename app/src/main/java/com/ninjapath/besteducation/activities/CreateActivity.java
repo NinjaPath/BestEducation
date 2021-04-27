@@ -9,12 +9,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -23,7 +20,6 @@ import com.google.firebase.storage.UploadTask;
 import com.ninjapath.besteducation.CourseData;
 import com.ninjapath.besteducation.R;
 import com.ninjapath.besteducation.SnackbarMessages;
-import com.ninjapath.besteducation.enums.EntryErrorCode;
 import com.ninjapath.besteducation.exceptions.EntryException;
 import com.ninjapath.besteducation.validationClasses.CourseDataValidation;
 
@@ -77,7 +73,6 @@ public class CreateActivity extends AppCompatActivity {
                 UploadTask uploadTask = videosRef.putFile(courseData.getLinkToVideo());
                 uploadTask.addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-
                     } else {
                         SnackbarMessages.makeSnackbarError(view,
                                 getString(R.string.unexpected_error));

@@ -20,7 +20,7 @@ public class CourseDataValidation {
     }
 
     private static void validateCourseName(CourseData courseData) throws EntryException {
-        String textRegex = "^[a-zA-Z0-9]{7,25}$";
+        String textRegex = "^[ а-яА-Яa-zA-Z0-9]{7,25}$";
         Pattern pat = Pattern.compile(textRegex);
         if (!pat.matcher(courseData.getName()).matches()) {
             throw new EntryException(EntryErrorCode.WRONG_COURSE_NAME);
