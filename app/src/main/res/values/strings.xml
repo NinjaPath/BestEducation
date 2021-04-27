@@ -24,6 +24,9 @@
     <string name="already_have_acc">Уже есть аккаунт?</string>
     <string name="log_in_underline"><u>Войти</u></string>
 
+    <!-- HomeFragment strings-->
+    <string name="my_courses_text">Мои курсы</string>
+
     <!-- Snackbar errors strings -->
     <string name="unexpected_error">Возникла непредвиденная ошибка!</string>
 
