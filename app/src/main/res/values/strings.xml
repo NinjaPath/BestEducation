@@ -1,8 +1,8 @@
 <resources>
 
     <!--Other-->
-    <string name="spam">AXAXAXAAX</string>
-    <string name="spam_email">AXAXAXAAX@mail.ru</string>
+    <string name="spam">Example</string>
+    <string name="spam_email">example@mail.ru</string>
 
     <!--Greeting and registration strings-->
     <string name="app_name">Best Education</string>
