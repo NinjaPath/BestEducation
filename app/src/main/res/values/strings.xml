@@ -1,4 +1,6 @@
 <resources>
+
+    <!--Greeting and registration strings-->
     <string name="app_name">Best Education</string>
     <string name="app_description">Приложение для поиска лучших учителей по любому предмету</string>
     <string name="log_in">Войти</string>
@@ -6,7 +8,19 @@
     <string name="account_create">Создание аккаунта</string>
     <string name="student">Я ученик/студент</string>
     <string name="teacher">Я учитель</string>
+
+    <!-- BottomNavigation strings-->
     <string name="profile">Profile</string>
     <string name="chats">Chats</string>
     <string name="home">Home</string>
+
+    <!-- RegistrationActivity strings-->
+    <string name="username">Имя пользователя</string>
+    <string name="email_address">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="or">Или</string>
+    <string name="sing_in_with_google">Войти с помощью Google</string>
+    <string name="already_have_acc">Уже есть аккаунт?</string>
+    <string name="log_in_underline"><u>Войти</u></string>
 </resources>
