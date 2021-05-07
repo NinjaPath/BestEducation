@@ -28,8 +28,7 @@ public class AuthenticationData {
         return repeatedPassword;
     }
 
-
-    public AuthenticationData( String accountType, String username, String email, String password, String repeatedPassword) {
+    public AuthenticationData(String accountType, String username, String email, String password, String repeatedPassword) {
         this.accountType = accountType;
         this.username = username;
         this.email = email;
