@@ -41,7 +41,7 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        String accountType = getIntent().getExtras().getString(ACCOUNT_TYPE);
+        AccountType accountType = (AccountType) getIntent().getExtras().getSerializable(ACCOUNT_TYPE);
         mAuth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
         arrowBack = findViewById(R.id.backArrow);
@@ -64,10 +64,9 @@ public class RegistrationActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Map<String, Object> userInfo = new HashMap<>();
                                 userInfo.put("id", mAuth.getCurrentUser().getUid());
-                                userInfo.put("accountType", authenticationData.getAccountType());
+                                userInfo.put("accountType", authenticationData.getStringAccountType());
                                 userInfo.put("nickname", authenticationData.getUsername());
                                 userInfo.put("email", authenticationData.getEmail());
-                                userInfo.put("password", authenticationData.getPassword());
                                 fstore.collection("users").
                                         document(mAuth.getCurrentUser().getUid()).set(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override

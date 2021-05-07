@@ -27,13 +27,13 @@ public class TypeSelectionActivity extends AppCompatActivity {
 
         studentButton.setOnClickListener(v -> {
             Intent intent = new Intent(TypeSelectionActivity.this, RegistrationActivity.class);
-            intent.putExtra(RegistrationActivity.ACCOUNT_TYPE, AccountType.STUDENT.toString());
+            intent.putExtra(RegistrationActivity.ACCOUNT_TYPE, AccountType.STUDENT);
             startActivity(intent);
         });
 
         teacherButton.setOnClickListener(v -> {
             Intent intent = new Intent(TypeSelectionActivity.this, RegistrationActivity.class);
-            intent.putExtra(RegistrationActivity.ACCOUNT_TYPE, AccountType.TEACHER.toString());
+            intent.putExtra(RegistrationActivity.ACCOUNT_TYPE, AccountType.TEACHER);
             startActivity(intent);
         });
 

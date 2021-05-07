@@ -1,12 +1,38 @@
 package com.ninjapath.besteducation.validationClasses;
 
 import com.ninjapath.besteducation.AuthenticationData;
+import com.ninjapath.besteducation.LoginData;
 import com.ninjapath.besteducation.enums.EntryErrorCode;
 import com.ninjapath.besteducation.exceptions.EntryException;
 
 import java.util.regex.Pattern;
 
 public class AuthenticationDataValidation {
+
+    public static void validateData(LoginData data) throws EntryException {
+        validatePassword(data);
+        validateEmail(data);
+    }
+
+    public static void validateEmail(LoginData loginData) throws EntryException {
+        String textRegex = "[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+";
+        Pattern pat = Pattern.compile(textRegex);
+        if (!pat.matcher(loginData.getEmail()).matches() || loginData.getEmail()
+                .length() > 254 || loginData.getEmail()
+                .length() < 3) {
+            throw new EntryException(EntryErrorCode.WRONG_EMAIL);
+        }
+    }
+
+    public static void validatePassword(LoginData loginData) throws EntryException {
+        String textRegex = "^(?=.*?[A-Z]).{8,18}$";
+        Pattern pat = Pattern.compile(textRegex);
+        if (!pat.matcher(loginData.getPassword()).matches()){
+            throw new EntryException(EntryErrorCode.WRONG_PASSWORD);
+        }
+    }
+
+
     public static void validateData(AuthenticationData authenticationData) throws EntryException {
         checkAllEntriesFilled(authenticationData);
         validateUsername(authenticationData);
