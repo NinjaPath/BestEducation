@@ -80,4 +80,7 @@
         <item>На дому у учителя</item>
         <item>Офис</item>
     </string-array>
+
+    <!-- Snackbar notify strings-->
+    <string name="course_created_successfully">Курс создан успешно!</string>
 </resources>
