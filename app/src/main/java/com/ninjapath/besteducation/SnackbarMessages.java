@@ -16,4 +16,16 @@ public class SnackbarMessages {
                 .setBackgroundTint(view.getContext().getResources().getColor(R.color.red))
                 .show();
     }
+
+    public static void makeSnackbarNotify(View view, String message) {
+        Snackbar
+                .make(
+                        view,
+                        message,
+                        Snackbar.LENGTH_LONG
+                )
+                .setTextColor(view.getContext().getResources().getColor(R.color.white))
+                .setBackgroundTint(view.getContext().getResources().getColor(R.color.green))
+                .show();
+    }
 }

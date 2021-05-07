@@ -1,12 +1,18 @@
 package com.ninjapath.besteducation;
 
+import com.ninjapath.besteducation.enums.AccountType;
+
 public class AuthenticationData {
-    private String accountType;
+    private AccountType accountType;
     private String username;
     private String email;
 
-    public String getAccountType() {
+    public AccountType getAccountType() {
         return accountType;
+    }
+
+    public String getStringAccountType() {
+        return accountType.toString();
     }
 
     private String password;
@@ -28,8 +34,7 @@ public class AuthenticationData {
         return repeatedPassword;
     }
 
-
-    public AuthenticationData( String accountType, String username, String email, String password, String repeatedPassword) {
+    public AuthenticationData(AccountType accountType, String username, String email, String password, String repeatedPassword) {
         this.accountType = accountType;
         this.username = username;
         this.email = email;

@@ -6,12 +6,14 @@
 
     <!--Greeting and registration strings-->
     <string name="app_name">Best Education</string>
-    <string name="app_description">Приложение для поиска лучших учителей по любому предмету</string>
+    <string name="app_description_firstScreen">Приложение для поиска лучших учителей по любому предмету</string>
     <string name="log_in">Войти</string>
     <string name="sign_in">Создать аккаунт</string>
     <string name="account_create">Создание аккаунта</string>
     <string name="student">Я ученик/студент</string>
     <string name="teacher">Я учитель</string>
+    <string name="app_description_login">Давно не виделись!</string>
+    <string name="registation">Зарегистрироваться</string>
 
     <!-- BottomNavigation strings-->
     <string name="profile">Profile</string>
@@ -27,7 +29,8 @@
     <string name="sing_in_with_google">Войти с помощью Google</string>
     <string name="already_have_acc">Уже есть аккаунт?</string>
     <string name="log_in_underline"><u>Войти</u></string>
-
+    <string name="log_in_acc">Войти в аккаунт</string>
+    
     <!-- HomeFragment strings-->
     <string name="my_courses_text">Мои курсы</string>
 
@@ -80,4 +83,7 @@
         <item>На дому у учителя</item>
         <item>Офис</item>
     </string-array>
+
+    <!-- Snackbar notify strings-->
+    <string name="course_created_successfully">Курс создан успешно!</string>
 </resources>
