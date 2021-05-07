@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5sp"
         android:fontFamily="@font/proximanova_semibold"
-        android:text="@string/app_description"
+        android:text="@string/app_description_firstScreen"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -20,7 +20,7 @@ import com.ninjapath.besteducation.fragments.ProfileFragment;
 public class MainActivity extends AppCompatActivity {
 
     public static final String ACCOUNT_TYPE = "accountType";
-    String accountType;
+    AccountType accountType;
 
 
     @Override
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        accountType = getIntent().getExtras().getString(ACCOUNT_TYPE);
+        accountType = (AccountType) getIntent().getExtras().getSerializable(ACCOUNT_TYPE);
 
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
