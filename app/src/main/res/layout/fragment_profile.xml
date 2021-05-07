@@ -77,6 +77,7 @@
             android:text="@string/courses"
             android:fontFamily="@font/proxima_nova_bold"
             android:textSize="25sp"
+            android:textColor="@color/white"
             android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/send_button"
@@ -90,15 +91,41 @@
             app:layout_constraintLeft_toLeftOf="parent"
         />
 
+    <TextView
+            android:id="@+id/examples"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exapmles"
+            android:textColor="@color/white"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:textSize="25sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/courses_recycle_view"
+            />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/examples_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/examples"
+
+            />
+
+
     <Button
+            android:id="@+id/discussions"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/grey"
             android:text="@string/discussions"
             android:textColor="@color/BE_yellow"
-            app:layout_constraintTop_toBottomOf="@id/courses_recycle_view"
+            app:layout_constraintTop_toBottomOf="@id/examples_recycle_view"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="40dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

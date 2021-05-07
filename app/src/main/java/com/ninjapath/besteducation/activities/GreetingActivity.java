@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ninjapath.besteducation.R;
+import com.ninjapath.besteducation.enums.AccountType;
 
 public class GreetingActivity extends AppCompatActivity {
 

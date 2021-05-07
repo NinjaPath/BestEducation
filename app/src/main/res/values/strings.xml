@@ -86,4 +86,5 @@
 
     <!-- Snackbar notify strings-->
     <string name="course_created_successfully">Курс создан успешно!</string>
+    <string name="exapmles">Примеры занятий</string>
 </resources>
