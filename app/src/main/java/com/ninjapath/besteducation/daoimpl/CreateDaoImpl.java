@@ -3,6 +3,7 @@ package com.ninjapath.besteducation.daoimpl;
 import android.content.Intent;
 import android.view.View;
 
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
@@ -45,8 +46,7 @@ public class CreateDaoImpl implements CreateDao {
 
         fstore.collection("users").document(mAuth.getCurrentUser().getUid()).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                Date data = new Date();
-                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                Timestamp timestamp = new Timestamp(new Date());
                 Map<String, Object> courseInfo = new HashMap<>();
                 courseInfo.put("name", courseData.getName());
                 courseInfo.put("price", courseData.getPrice());
@@ -55,9 +55,10 @@ public class CreateDaoImpl implements CreateDao {
                 courseInfo.put("pupilsCount", courseData.getCountOfPupils());
                 courseInfo.put("lessonType", courseData.getCourseDuration());
                 courseInfo.put("owner", task.getResult().get("nickname"));
-                courseInfo.put("creationDate", formatter.format(data));
+                courseInfo.put("creationDate", timestamp);
                 fstore.collection("courses").document().set(courseInfo).addOnCompleteListener(task1 -> {
                     if (task.isSuccessful()) {
+                        //FIXME Fix this snackbar, it isn`t working
 //                        SnackbarMessages.makeSnackbarNotify(view, Resources.getSystem().
 //                                getString(R.string.course_created_successfully));
                         Intent intentToMainActivity = new Intent(view.getContext(),
