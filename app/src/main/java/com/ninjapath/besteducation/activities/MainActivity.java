@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        accountType = (AccountType) getIntent().getExtras().getSerializable(ACCOUNT_TYPE);
 
-
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 

@@ -1,21 +1,22 @@
 package com.ninjapath.besteducation.daoimpl;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.view.View;
 
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.ninjapath.besteducation.CourseData;
-import com.ninjapath.besteducation.R;
 import com.ninjapath.besteducation.SnackbarMessages;
 import com.ninjapath.besteducation.activities.MainActivity;
 import com.ninjapath.besteducation.dao.CreateDao;
 import com.ninjapath.besteducation.enums.EntryErrorCode;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,6 +46,7 @@ public class CreateDaoImpl implements CreateDao {
 
         fstore.collection("users").document(mAuth.getCurrentUser().getUid()).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
+                Timestamp timestamp = new Timestamp(new Date());
                 Map<String, Object> courseInfo = new HashMap<>();
                 courseInfo.put("name", courseData.getName());
                 courseInfo.put("price", courseData.getPrice());
@@ -53,6 +55,7 @@ public class CreateDaoImpl implements CreateDao {
                 courseInfo.put("pupilsCount", courseData.getCountOfPupils());
                 courseInfo.put("lessonType", courseData.getCourseDuration());
                 courseInfo.put("owner", task.getResult().get("nickname"));
+                courseInfo.put("creationDate", timestamp);
                 fstore.collection("courses").document().set(courseInfo).addOnCompleteListener(task1 -> {
                     if (task.isSuccessful()) {
                         SnackbarMessages.makeSnackbarNotify(view, "Курс создан успешно!");  //Resources.getSystem().getString(R.string.course_created_successfully));
