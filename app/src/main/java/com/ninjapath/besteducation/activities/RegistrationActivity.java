@@ -68,18 +68,15 @@ public class RegistrationActivity extends AppCompatActivity {
                                 userInfo.put("nickname", authenticationData.getUsername());
                                 userInfo.put("email", authenticationData.getEmail());
                                 fstore.collection("users").
-                                        document(mAuth.getCurrentUser().getUid()).set(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        if (task.isSuccessful()) {
-                                            Intent intentToMain = new Intent(RegistrationActivity.this, MainActivity.class);
-                                            intentToMain.putExtra(MainActivity.ACCOUNT_TYPE, accountType);
-                                            startActivity(intentToMain);
-                                        } else {
-                                            SnackbarMessages.makeSnackbarError(view,getResources().getString(R.string.unexpected_error));
-                                        }
-                                    }
-                                });
+                                        document(mAuth.getCurrentUser().getUid()).set(userInfo).addOnCompleteListener(task1 -> {
+                                            if (task1.isSuccessful()) {
+                                                Intent intentToMain = new Intent(RegistrationActivity.this, MainActivity.class);
+                                                intentToMain.putExtra(MainActivity.ACCOUNT_TYPE, accountType);
+                                                startActivity(intentToMain);
+                                            } else {
+                                                SnackbarMessages.makeSnackbarError(view,getResources().getString(R.string.unexpected_error));
+                                            }
+                                        });
                             }
                         });
             } catch (EntryException e) {

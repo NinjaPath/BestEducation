@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        accountType = (AccountType) getIntent().getExtras().getSerializable(ACCOUNT_TYPE);
-
+//        accountType = (AccountType) getIntent().getExtras().getSerializable(ACCOUNT_TYPE);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);

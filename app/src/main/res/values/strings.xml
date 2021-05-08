@@ -55,6 +55,7 @@
     <string name="add_example_of_video">Добавьте видео пример вашего урока </string>
     <string name="insert_course_price">Введите цену курса</string>
     <string name="insert_count">Введите количество участников в группе</string>
+<!--    <string name="create_course">Создать курс</string>-->
 
     <!-- SchoolSubjectsSpinner strings-->
     <string-array name="school_subject">
@@ -84,6 +85,8 @@
         <item>Офис</item>
     </string-array>
 
+
     <!-- Snackbar notify strings-->
     <string name="course_created_successfully">Курс создан успешно!</string>
+    <string name="exapmles">Примеры занятий</string>
 </resources>

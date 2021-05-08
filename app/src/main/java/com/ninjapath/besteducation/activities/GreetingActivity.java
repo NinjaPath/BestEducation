@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.ninjapath.besteducation.R;
+import com.ninjapath.besteducation.enums.AccountType;
 
 public class GreetingActivity extends AppCompatActivity {
 
@@ -19,14 +20,14 @@ public class GreetingActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-//        //Check if user is signed in (non-null) and update UI accordingly.
-//        mAuth = FirebaseAuth.getInstance();
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if (currentUser != null) {
-//            Intent intentToHome = new Intent(GreetingActivity.this,
-//                    MainActivity.class);
-//            startActivity(intentToHome);
-//        }
+        //Check if user is signed in (non-null) and update UI accordingly.
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            Intent intentToHome = new Intent(GreetingActivity.this,
+                    MainActivity.class);
+            startActivity(intentToHome);
+        }
     }
 
     @Override
