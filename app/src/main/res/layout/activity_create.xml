@@ -132,7 +132,7 @@
         android:layout_height="70dp"
         android:backgroundTint="@color/BE_yellow"
         android:fontFamily="@font/proximanova_semibold"
-        android:text="@string/sign_in"
+        android:text="@string/create_course"
         android:textAllCaps="false"
         android:textColor="@color/BE_black"
         android:textSize="15sp"

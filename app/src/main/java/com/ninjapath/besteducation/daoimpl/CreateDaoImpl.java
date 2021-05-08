@@ -55,8 +55,7 @@ public class CreateDaoImpl implements CreateDao {
                 courseInfo.put("owner", task.getResult().get("nickname"));
                 fstore.collection("courses").document().set(courseInfo).addOnCompleteListener(task1 -> {
                     if (task.isSuccessful()) {
-                        SnackbarMessages.makeSnackbarNotify(view, Resources.getSystem().
-                                getString(R.string.course_created_successfully));
+                        SnackbarMessages.makeSnackbarNotify(view, "Курс создан успешно!");  //Resources.getSystem().getString(R.string.course_created_successfully));
                         Intent intentToMainActivity = new Intent(view.getContext(),
                                 MainActivity.class);
                         view.getContext().startActivity(intentToMainActivity);
